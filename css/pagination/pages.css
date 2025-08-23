@@ -1,0 +1,42 @@
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-inline: auto;
+
+    & .user-header {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    & h2 {
+        text-align: left;
+        line-height: 1.2;
+        text-wrap: pretty;
+    }
+
+    & svg {
+        width: 3.125rem;
+        height: 3.125rem;
+        fill: var(--body-fg);
+    }
+
+    & img {
+        margin-inline: auto;
+        width: 100%;
+    }
+
+    & p {
+        padding: 1em;
+    }
+
+    .content {
+        background-color: var(--accent-neutral);
+    }
+
+    & .link {
+        text-align: right;
+    }
+}

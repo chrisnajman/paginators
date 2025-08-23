@@ -1,0 +1,45 @@
+.theme-toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.3125rem 0.625rem;
+    margin-block-start: 0;
+    border: 0;
+
+    & button {
+        font-size: clamp(0.875rem, 0.8248rem + 0.2336vw, 1rem);
+        font-family: inherit;
+        background-color: var(--accent-colour);
+
+        width: 1.5625rem;
+        height: 0.8125rem;
+        border: 0;
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0.125rem;
+
+        & span {
+            height: 0.8125rem;
+            width: 0.8125rem;
+            background-color: white;
+            border-radius: 50%;
+        }
+    }
+
+    & p {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--body-fg);
+    }
+}
+
+.darkmode {
+    & .theme-toggler button {
+        justify-content: flex-end;
+    }
+}

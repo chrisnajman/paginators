@@ -1,0 +1,63 @@
+.paginator-container {
+    display: flex;
+    justify-content: center;
+}
+
+.paginator {
+    display: flex;
+    @media screen and (width <= 28.75rem) {
+        flex-direction: column;
+    }
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: auto;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    background-color: var(--el-bg);
+    color: var(--accent-colour);
+
+    & button {
+        padding: 0.3125rem;
+
+        &:disabled,
+        &[aria-current="page"] {
+            pointer-events: none;
+            outline: none;
+            opacity: 0.5;
+        }
+    }
+
+    & .previous-next-btn {
+        &::before,
+        &::after {
+            position: relative;
+            top: 0.0625rem;
+        }
+    }
+
+    & .previous-btn {
+        &::before {
+            content: "⯇";
+        }
+
+        @media screen and (width <= 28.75rem) {
+            align-self: flex-start;
+        }
+    }
+
+    & .next-btn {
+        &::after {
+            content: "⯈";
+        }
+        @media screen and (width <= 28.75rem) {
+            align-self: flex-end;
+        }
+    }
+
+    & .page-numbers-container {
+        display: flex;
+        gap: clamp(0rem, -0.4002rem + 1.867vw, 1rem);
+        align-items: center;
+    }
+}

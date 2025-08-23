@@ -1,0 +1,34 @@
+.primary-navigation {
+    & nav {
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    & ul {
+        list-style: "";
+        display: flex;
+        gap: 1.25rem;
+        align-items: baseline;
+        width: fit-content;
+        margin-inline: auto;
+    }
+    & a {
+        color: var(--accent-colour);
+        border-block-end: 0.3125rem solid transparent;
+        padding-block-end: 0.3125rem;
+        margin-block-end: 0.625rem;
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+
+        &[aria-current="page"],
+        &:hover {
+            border-block-end: 0.3125rem solid var(--body-fg);
+            color: var(--body-fg);
+        }
+
+        &[aria-current="page"] {
+            pointer-events: none;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+@import "./css/root.css";
+@import "./css/base.css";
+@import "./css/theme-toggler.css";
+@import "./css/navigation.css";
+@import "./css/loader.css";
+@import "./css/pagination/index.css";

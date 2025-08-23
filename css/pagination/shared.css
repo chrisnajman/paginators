@@ -1,0 +1,10 @@
+/* Disable web, email and 'fake' links */
+.faux-link {
+    cursor: not-allowed;
+    color: var(--accent-colour);
+    opacity: 0.65;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
