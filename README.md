@@ -24,7 +24,7 @@
 
 ## Introduction
 
-A modular, lightweight pagination system for displaying content from various (and varied) JSON data sources. Supports multiple pages with a customisable number of items per page and dynamic pagination buttons.
+A modular, lightweight and accessible pagination system for displaying content from various (and varied) JSON data sources. Supports multiple pages with a customisable number of items per page and dynamic pagination buttons.
 
 [View on GitPage](https://chrisnajman.github.io/paginators)
 
