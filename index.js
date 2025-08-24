@@ -1,9 +1,9 @@
 import themeSwitcher from "./js-modules/theme.js"
 import { PAGE_TYPES } from "./js-modules/globals.js"
 import { showLoader } from "./js-modules/loader.js"
-import pages from "./js-modules/pages/pages.js"
-import posts from "./js-modules/posts/posts.js"
-import users from "./js-modules/users/users.js"
+import pages from "./js-modules/page-item-types/pages.js"
+import posts from "./js-modules/page-item-types/posts.js"
+import users from "./js-modules/page-item-types/users.js"
 
 themeSwitcher()
 const bodyId = document.body.id

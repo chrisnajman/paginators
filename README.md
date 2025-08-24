@@ -56,7 +56,7 @@ Relevant paginator-related files are listed below.
 - **`json/`**
   - `pages.json`: Array of objects, with `"content"` field containing escaped HTML.
   - `posts.json`: Object with key of `"posts"` containing an array of objects.
-  - `users.json`: Array of objects with 2-level deep nesting.
+  - `users.json`: Array of objects with two-level nesting.
 - **`js-modules/`**
   - `globals.js`: Global constants (e.g., max visible pagination buttons, HTML `body` ids, etc).
   - `loader.js`: Loader animation logic.
@@ -75,12 +75,10 @@ Relevant paginator-related files are listed below.
     - **`helpers/`**
       - `set-loader-timeout.js`: Utility for controlling loader display timing.
       - `url-sync.js`: Syncs current page with URL and supports back/forward.
-  - **`pages/`**
-    - `pages.js`: Pages-specific code that fetches JSON and calls `initPaginator`.
-  - **`posts/`**
-    - `posts.js`: Posts-specific code that fetches JSON and calls `initPaginator`.
-  - **`users/`**
-    - `users.js`: Users-specific code that fetches JSON and calls `initPaginator`.
+  - **`page-item-types/`**: Item type-specific code that fetches JSON and calls `initPaginator`.
+    - `pages.js`
+    - `posts.js`
+    - `users.js`
 
 ### Other
 
