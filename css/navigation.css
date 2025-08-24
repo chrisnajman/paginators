@@ -1,16 +1,29 @@
 .primary-navigation {
+    padding-inline: 1rem;
     & nav {
-        width: fit-content;
-        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+
+        @media screen and (width <= 400px) {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+        }
     }
 
     & ul {
-        list-style: "";
-        display: flex;
-        gap: 1.25rem;
-        align-items: baseline;
-        width: fit-content;
-        margin-inline: auto;
+        &:first-of-type {
+            grid-column: 2;
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+        }
+
+        &:last-of-type {
+            grid-column: 3;
+            justify-self: end;
+        }
     }
     & a {
         color: var(--accent-colour);
