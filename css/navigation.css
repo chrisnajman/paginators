@@ -5,7 +5,7 @@
         grid-template-columns: 1fr auto 1fr;
         align-items: center;
 
-        @media screen and (width <= 400px) {
+        @media screen and (width <= 25rem) {
             display: flex;
             justify-content: center;
             gap: 1.25rem;
