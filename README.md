@@ -130,9 +130,15 @@ Place your file in the `/json/` folder.
 ]
 ```
 
-### 2. Create or Update HTML Template
+### 2. Create a New HTML Page: `products.html`
 
-Add a `<template>` to the corresponding HTML page (or create a new page, e.g. `products.html`):
+1. Add an id to the `body` tag:
+
+```javascript
+<body id="products-pagination" class="flow">
+```
+
+2. Add a `<template>` to `products.html`:
 
 ```html
 <template id="article-template-product">
@@ -142,6 +148,15 @@ Add a `<template>` to the corresponding HTML page (or create a new page, e.g. `p
     <p>Manufacturer: <span data-manufacturer></span></p>
   </article>
 </template>
+```
+
+3. Add Paginator and Pagination Containers
+
+Make sure your HTML page has a container and paginator element:
+
+```html
+<div id="products-page-container"></div>
+<div id="paginator"></div>
 ```
 
 ## 3. Create a Type-Specific Renderer
@@ -173,8 +188,8 @@ export default function renderProductsContent(
 **Example**: `js-modules/products/products.js`
 
 ```javascript
+import { maxVisiblePaginationButtons } from "../globals.js"
 import initPaginator from "../pagination/paginator.js"
-import renderProductsContent from "../pagination/components/render-products-content.js"
 
 export default async function loadProducts() {
   try {
@@ -204,23 +219,68 @@ export default async function loadProducts() {
 document.addEventListener("DOMContentLoaded", loadProducts)
 ```
 
-### 5. Add Pagination Container
+### 5. Update `globals.js`
 
-Make sure your HTML page has a container and paginator element:
+Add the products `body` id to the `PAGE_TYPES` variable:
 
-```html
-<div id="products-page-container"></div>
-<div id="paginator"></div>
+```javascript
+export const PAGE_TYPES = {
+  PAGES: "pages-pagination",
+  POSTS: "posts-pagination",
+  USERS: "users-pagination",
+  PRODUCTS: "products-pagination", // Products
+}
+
+// Edit if defaultLoaderTimeout is not long enough/too long:
+export const loaderTimeouts = {
+  [PAGE_TYPES.PAGES]: 500, // Loads images so more time required
+  // These can use defaultLoaderTimeout = 250 for now, but uncomment and change,
+  // if required
+  // [PAGE_TYPES.POSTS]: 250,
+  // [PAGE_TYPES.USERS]: 250,
+  // [PAGE_TYPES.PRODUCTS]: 250, // Products
+}
 ```
 
-### 6. Finish
+### 6. Update `paginator.js`
+
+- At the top of the file, add:
+
+```javascript
+import renderProductsContent from "./components/render-products-content.js"
+```
+
+- Then, within `requestAnimationFrame()` add:
+
+```javascript
+if (bodyId === PAGE_TYPES.PRODUCTS)
+  renderProductsContent(data, template, containerId, page, itemsPerPage)
+```
+
+### 7. Update `index.js`
+
+- At the top of the file, add:
+
+```javascript
+import products from "./js-modules/page-item-types/products.js"
+```
+
+- Then add:
+
+```javascript
+else if (bodyId === PAGE_TYPES.PRODUCTS) {
+  products()
+
+
+```
+
+to the end of the `if` statement.
+
+### 8. Finish
 
 The new type is now fully integrated into the paginator system.
 
-This pattern keeps everything modular:
-
-- The core `render-content.js` and `paginator.js` remain untouched.
-- New JSON types only require a template, a renderer, optional normalization, and a small loader script.
+This pattern keeps everything modular and the core `render-content.js` and `paginator.js` remain untouched.
 
 [Back to menu](#menu)
 
