@@ -37,14 +37,34 @@
             </svg>
             <span>Paginators</span>
         </p>
-        <div id="primary-navigation" class="primary-navigation">
-            <nav id="site-navigation">
-                <ul>
+        <div class="navigation">
+            <nav>
+                <details class="page-nav" id="page-nav">
+                    <summary class="element">
+                        Index of Pages
+                    </summary>
+
+                    <div class="menu-panel">
+                        <ul>
+                            <li><a href="?page=1">Web-safe Colour: Magenta</a></li>
+                            <li><a href="?page=2">Web-safe Colour: Blue</a></li>
+                            <li><a href="?page=3">Web-safe Colour: Green</a></li>
+                            <li><a href="?page=4">Web-safe Colour: Lime</a></li>
+                            <li><a href="?page=5">Web-safe Colour: Aqua</a></li>
+                            <li><a href="?page=6">Web-safe Colour: Orange</a></li>
+                            <li><a href="?page=7">Web-safe Colour: Purple</a></li>
+                            <li><a href="?page=8">Web-safe Colour: Red</a></li>
+                            <li><a href="?page=9">Web-safe Colour: Yellow</a></li>
+                        </ul>
+                    </div>
+
+                </details>
+                <ul class="primary-links">
                     <li><a href="./" aria-current="page">Pages</a></li>
                     <li><a href="./posts.html">Posts</a></li>
                     <li><a href="./users.html">Users</a></li>
                 </ul>
-                <ul>
+                <ul class="secondary-links">
                     <li><a href="./about.html">About</a></li>
                 </ul>
             </nav>
@@ -55,7 +75,7 @@
 
         <div class="container flow">
 
-            <h1>Pages</h1>
+            <h1 id="heading-pages" tabindex="0">Pages (<span id="page-no"></span>)</h1>
             <div id="live-region" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
 
             <div id="pages-page-container"></div>

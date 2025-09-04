@@ -60,6 +60,8 @@ Relevant paginator-related files are listed below.
 - **`js-modules/`**
   - `globals.js`: Global constants (e.g., max visible pagination buttons, HTML `body` ids, etc).
   - `loader.js`: Loader animation logic.
+  - `page-number.js`: (Optional) display page number in `<h1>`
+  - `details-page-nav.js`: Close `details` if you click outside it.
   - **`pagination/`**
     - `paginator.js`: Main paginator initialization logic, handles updates, renders content, pagination buttons, and URL sync.
     - **`components/`**
@@ -73,6 +75,7 @@ Relevant paginator-related files are listed below.
       - **`render-customisations/`**
         - `normalise-users-data.js`: Example of per-type custom transformations.
     - **`helpers/`**
+      - `redirect_404.js`: Redirect to `404.html` if page number is out of range.
       - `set-loader-timeout.js`: Utility for controlling loader display timing.
       - `url-sync.js`: Syncs current page with URL and supports back/forward.
   - **`page-item-types/`**: Item type-specific code that fetches JSON and calls `initPaginator`.
@@ -103,6 +106,8 @@ Relevant paginator-related files are listed below.
 The paginator makes it easy to move through long lists of items without overwhelming the page. You can choose how many page buttons to display at once — for example, showing just a few nearby pages or spreading out more options.
 
 When there are too many pages to fit, the paginator automatically adds ellipsis (…) to show that more pages exist before or after the visible range. This keeps the navigation clean and simple, while still giving quick access to the first page, last page, and the pages closest to where you are.
+
+After a page loads, focus is set on the page `<h1>`
 
 [Back to menu](#menu)
 
@@ -501,6 +506,8 @@ The `render-content.js` script will set the `href` of each `<a>` automatically f
   - `base.css`
   - `loader.css`
   - `navigation.css`
+  - `redirect.css`
+  - `details-transition.css`
   - `theme-toggle.css`
   - **`pagination/`**
     - `index.css`: `@imports` all files in `pagination/` folder.

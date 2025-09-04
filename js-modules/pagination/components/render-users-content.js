@@ -6,13 +6,14 @@ export default function renderUsersContent(
   data,
   template,
   containerId,
+  pageAnchorId,
   page,
   itemsPerPage
 ) {
   // Customised JSON fields:
   const dataNormalised = normaliseData(data, userTransformations)
 
-  renderContent(dataNormalised, template, containerId, {
+  renderContent(dataNormalised, template, containerId, pageAnchorId, {
     page,
     itemsPerPage,
     contentKeys: [], // plain text

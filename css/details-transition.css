@@ -1,0 +1,39 @@
+/*
+  Apply styles only when the user has not requested reduced motion
+*/
+@media screen and (prefers-reduced-motion: no-preference) {
+    /*
+    Check if the browser supports the experimental 'interpolate-size' property
+    (some browsers may ignore this block if they don't support it)
+  */
+    @supports (interpolate-size: allow-keywords) {
+        /*
+      Enable the 'interpolate-size' feature globally.
+      This is a proposed property allowing height/width interpolation on elements
+      like <details>, which normally don't transition well.
+    */
+        :root {
+            interpolate-size: allow-keywords;
+        }
+
+        /*
+      Target all <details> elements.
+      Apply a transition on the height property and set a fixed closed height.
+    */
+        details {
+            transition: height 0.5s ease;
+            height: 5rem; /* Set closed height */
+
+            /*
+        When the <details> element is open:
+        - Allow it to grow in height
+        - Use 'overflow: clip' to hide overflowing content while transitioning
+        (Note: 'overflow: clip' avoids scrollbars)
+      */
+            &[open] {
+                height: auto;
+                overflow: clip;
+            }
+        }
+    }
+}

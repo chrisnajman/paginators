@@ -4,10 +4,11 @@ export default function renderPagesContent(
   data,
   template,
   containerId,
+  pageAnchorId,
   page,
   itemsPerPage
 ) {
-  renderContent(data, template, containerId, {
+  renderContent(data, template, containerId, pageAnchorId, {
     page,
     itemsPerPage,
     contentKeys: ["content"], // render HTML safely

@@ -1,63 +1,63 @@
 [
   {
     "id": "1",
-    "title": "1. Web-safe Colour: Magenta",
+    "title": "Web-safe Colour: Magenta",
     "content": "<picture>\n      <source srcset=\"./img/magenta.avif\" type=\"image/avif\" />\n<img src=\"./img/magenta.png\" alt=\"\" width=\"584\" class=\"main-image\">\n</picture>\n<p>Magenta took its name from an aniline dye made and patented in 1859 by the French chemist François-Emmanuel Verguin, who originally called it fuchsine. It was renamed to celebrate the French-Sardinian victory under French Emperor Napoleon III at the Battle of Magenta against the larger army of the Austrian Empire on 4 June 1859 near the Italian town of Magenta, at the time in Austria. This battle was decisive in liberating Italy from Austrian domination.</p>\n",
     "ref-url": "https://en.wikipedia.org/wiki/Magenta",
     "url-text": "Wikipedia (Magenta)"
   },
   {
     "id": "2",
-    "title": "2. Web-safe Colour: Blue",
+    "title": "Web-safe Colour: Blue",
     "content": "<source srcset=\"./img/blue.avif\" type=\"image/avif\" />\n <img src=\"./img/blue.png\" alt=\"\" width=\"584\" class=\"main-image\">\n    </picture>\n<p>In the United States and Europe, blue is the colour that both men and women are most likely to choose as their favourite, with at least one recent survey showing the same across several other countries, including China, Malaysia, and Indonesia. Past surveys in the US and Europe have found that blue is the colour most commonly associated with harmony, confidence, masculinity, knowledge, intelligence, calmness, distance, infinity, the imagination, cold, and sadness.</p>\n",
     "ref-url": "https://en.wikipedia.org/wiki/Blue",
     "url-text": "Wikipedia (Blue)"
   },
   {
     "id": "3",
-    "title": "3. Web-safe Colour: Green",
+    "title": "Web-safe Colour: Green",
     "content": "<source srcset=\"./img/green.avif\" type=\"image/avif\" />\n <img src=\"./img/green.png\" alt=\"\" width=\"584\" class=\"main-image\">\n</picture>\n<p>During post-classical and early modern Europe, green was the color commonly associated with wealth, merchants, bankers, and the gentry, while red was reserved for the nobility. For this reason, the costume of the Mona Lisa by Leonardo da Vinci and the benches in the British House of Commons are green while those in the House of Lords are red. It also has a long historical tradition as the color of Ireland and of Gaelic culture. It is also the historic color of Islam.</p>\n",
     "ref-url": "https://en.wikipedia.org/wiki/Green",
     "url-text": "Wikipedia (Green)"
   },
   {
     "id": "4",
-    "title": "4. Web-safe Colour: Lime",
+    "title": "Web-safe Colour: Lime",
     "content": "<source srcset=\"./img/lime.avif\" type=\"image/avif\" />\n <img src=\"./img/lime.png\" alt=\"\" width=\"584\" class=\"main-image\">\n</picture>\n<p>During the 2000s, lime green was a very popular aesthetic, particularly with products, throughout the entirety of the decade and eventually saw a resurgence during the early 2020s. Some fire engines in the United States are lime yellow rather than red due to safety and ergonomics reasons. A 2009 study by the U.S. Fire Administration concluded that fluorescent colors, including yellow-green and orange, are easiest to spot in daylight.</p>\n",
     "ref-url": "https://en.wikipedia.org/wiki/Lime_(color)",
     "url-text": "Wikipedia (Lime)"
   },
   {
     "id": "5",
-    "title": "5. Web-safe Colour: Aqua",
+    "title": "Web-safe Colour: Aqua",
     "content": "<source srcset=\"./img/aqua.avif\" type=\"image/avif\" />\n <img src=\"./img/aqua.png\" alt=\"\" width=\"584\" class=\"main-image\">\n</picture>\n<p>Latin for 'water', aqua is a variation of the color cyan. The normalized color coordinates for the two web colors named aqua and cyan are identical. It was one of the three secondary colors of the RGB color model used on computer and television displays. In the HSV color wheel aqua is precisely halfway between blue and green. However, aqua is not the same as the primary subtractive color named process cyan used in printing.</p>\n",
     "ref-url": "https://en.wikipedia.org/wiki/Aqua_(color)",
     "url-text": "Wikipedia (Aqua)"
   },
   {
     "id": "6",
-    "title": "6. Web-safe Colour: Orange",
+    "title": "Web-safe Colour: Orange",
     "content": "<source srcset=\"./img/orange.avif\" type=\"image/avif\" />\n<img src=\"./img/orange.png\" alt=\"\" width=\"584\" class=\"main-image\">\n</picture>\n<p>The orange colour of many fruits and vegetables, such as carrots, pumpkins, sweet potatoes, and oranges, comes from carotenes, a type of photosynthetic pigment. These pigments convert the light energy that the plants absorb from the Sun into chemical energy for the plants' growth. Similarly, the hues of autumn leaves are from the same pigment after chlorophyll is removed. In traditional colour theory, it is a secondary colour of pigments, produced by mixing yellow and red.</p>\n",
     "ref-url": "https://en.wikipedia.org/wiki/Orange_(colour)",
     "url-text": "Wikipedia (Orange)"
   },
   {
     "id": "7",
-    "title": "7. Web-safe Colour: Purple",
+    "title": "Web-safe Colour: Purple",
     "content": "<source srcset=\"./img/purple.avif\" type=\"image/avif\" />\n <img src=\"./img/purple.png\" alt=\"\" width=\"584\" class=\"main-image\">\n    </picture>\n<p>Purple has long been associated with royalty, originally because Tyrian purple dye—made from the secretions of sea snails—was extremely expensive in antiquity. Purple was the color worn by Roman magistrates; it became the imperial color worn by the rulers of the Byzantine Empire and the Holy Roman Empire, and later by Roman Catholic bishops. Similarly in Japan, the color is traditionally associated with the emperor and aristocracy.</p>\n",
     "ref-url": "https://en.wikipedia.org/wiki/Purple",
     "url-text": "Wikipedia (Purple)"
   },
   {
     "id": "8",
-    "title": "8. Web-safe Colour: Red",
+    "title": "Web-safe Colour: Red",
     "content": "<source srcset=\"./img/red.avif\" type=\"image/avif\" />\n <img src=\"./img/red.png\" alt=\"\" width=\"584\" class=\"main-image\">\n</picture>\n<p>Since red is the color of blood, it has historically been associated with sacrifice, danger, and courage. Modern surveys in Europe and the United States show red is also the color most commonly associated with heat, activity, passion, sexuality, anger, love, and joy. In China, India, and many other Asian countries it is the color symbolizing happiness and good fortune. Red pigment made from ochre was one of the first colors used in prehistoric art.</p>\n",
     "ref-url": "https://en.wikipedia.org/wiki/Red",
     "url-text": "Wikipedia (Red)"
   },
   {
     "id": "9",
-    "title": "9. Web-safe Colour: Yellow",
+    "title": "Web-safe Colour: Yellow",
     "content": "<source srcset=\"./img/yellow.avif\" type=\"image/avif\" />\n <img src=\"./img/yellow.png\" alt=\"\" width=\"584\" class=\"main-image\">\n</picture>\n<p>The Lascaux cave in France has a painting of a yellow horse 17,000 years old. Ochre and orpiment pigments were used to represent gold and skin color in Egyptian tombs, then in the murals in Roman villas. In the early Christian church, yellow was the color associated with the Pope and the golden keys of the Kingdom, but it was also associated with Judas Iscariot and used to mark heretics. In China, bright yellow could be worn only by the emperor and his household.</p>\n",
     "ref-url": "https://en.wikipedia.org/wiki/Yellow",
     "url-text": "Wikipedia (Yellow)"

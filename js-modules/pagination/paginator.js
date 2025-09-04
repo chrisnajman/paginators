@@ -13,6 +13,7 @@ export default function initPaginator({
   data,
   templateId,
   containerId,
+  pageAnchorId,
   itemsPerPage,
   maxButtons,
   itemsKey = null,
@@ -39,11 +40,32 @@ export default function initPaginator({
     requestAnimationFrame(() => {
       const bodyId = document.body.id
       if (bodyId === PAGE_TYPES.PAGES)
-        renderPagesContent(data, template, containerId, page, itemsPerPage)
+        renderPagesContent(
+          data,
+          template,
+          containerId,
+          pageAnchorId,
+          page,
+          itemsPerPage
+        )
       if (bodyId === PAGE_TYPES.POSTS)
-        renderPostsContent(data, template, containerId, page, itemsPerPage)
+        renderPostsContent(
+          data,
+          template,
+          containerId,
+          pageAnchorId,
+          page,
+          itemsPerPage
+        )
       if (bodyId === PAGE_TYPES.USERS)
-        renderUsersContent(data, template, containerId, page, itemsPerPage)
+        renderUsersContent(
+          data,
+          template,
+          containerId,
+          pageAnchorId,
+          page,
+          itemsPerPage
+        )
 
       const msg = `Page ${page} loaded`
       announcePageLoaded(msg)

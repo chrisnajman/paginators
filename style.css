@@ -3,4 +3,6 @@
 @import "./css/theme-toggler.css";
 @import "./css/navigation.css";
 @import "./css/loader.css";
+@import "./css/redirect.css";
 @import "./css/pagination/index.css";
+@import "./css/details-transition.css";

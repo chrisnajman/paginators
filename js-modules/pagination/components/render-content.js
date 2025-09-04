@@ -2,6 +2,7 @@ export default function renderContent(
   data,
   template,
   containerId,
+  pageAnchorId,
   options = {}
 ) {
   const {
@@ -110,8 +111,73 @@ export default function renderContent(
     renderItem(item, null)
     container.appendChild(clone)
   })
+  const mainHeading = document.getElementById(pageAnchorId)
+  moveFocusToMainHeading(mainHeading, { scroll: true })
+}
 
-  container.setAttribute("tabindex", "-1")
-  container.focus({ preventScroll: true })
-  container.removeAttribute("tabindex")
+// Track whether the user’s last interaction was via keyboard or mouse.
+// This global flag is used to decide how to handle page transitions:
+//
+// - If the last interaction was via keyboard, the title element is scrolled
+//   into view and receives focus (with a visible outline).
+// - If the last interaction was via mouse, the page scrolls to the very top
+//   and focus is not moved (so no outline is shown).
+//
+// This ensures consistent behavior for both input types:
+// keyboard users get clear focus feedback, while mouse users avoid unwanted outlines.
+
+let lastInteractionWasKeyboard = false
+window.addEventListener("keydown", () => {
+  lastInteractionWasKeyboard = true
+})
+window.addEventListener("mousedown", () => {
+  lastInteractionWasKeyboard = false
+})
+
+/**
+ * Move focus to the page title safely after content changes, with input-type-specific behavior.
+ *
+ * Behavior:
+ * - Keyboard activation:
+ *   • Scrolls the title into view smoothly, using an optional vertical offset.
+ *   • Moves focus to the title so the user sees the focus-visible outline.
+ * - Mouse activation:
+ *   • Scrolls to the top of the page (banner visible).
+ *   • Does not move focus, so no focus outline appears.
+ *
+ * Accessibility notes:
+ * - The title element has a permanent tabindex="0" in the HTML, so it is always focusable.
+ *   (No dynamic tabindex manipulation is needed.)
+ * - For programmatic focus, the 'focus-silent' class suppresses outlines for mouse users.
+ *
+ */
+
+function moveFocusToMainHeading(target, { offset = 20 } = {}) {
+  const el =
+    typeof target === "string" ? document.getElementById(target) : target
+  if (!el) return
+
+  if (lastInteractionWasKeyboard) {
+    // Keyboard: scroll to title and focus with outline
+    const addedTabindex = !el.hasAttribute("tabindex")
+    if (addedTabindex) el.setAttribute("tabindex", "-1")
+
+    const top = el.getBoundingClientRect().top + window.scrollY - offset
+    window.scrollTo({ top, behavior: "smooth" })
+
+    requestAnimationFrame(() => {
+      el.focus({ preventScroll: true })
+    })
+
+    el.addEventListener(
+      "blur",
+      () => {
+        if (addedTabindex) el.removeAttribute("tabindex")
+      },
+      { once: true }
+    )
+  } else {
+    // Mouse: scroll to very top, do not move focus
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
 }

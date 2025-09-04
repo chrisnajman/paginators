@@ -1,0 +1,8 @@
+.redirect {
+    width: fit-content;
+    margin-inline: auto;
+
+    & a {
+        color: var(--accent-colour);
+    }
+}

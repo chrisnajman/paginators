@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Four pages of users (each page displaying three items) with a paginator to navigate between them.">
-    <title>Users | Paginators</title>
+    <title>ANCHOR Users | Paginators</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -40,14 +40,14 @@
         </p>
 
 
-        <div id="primary-navigation" class="primary-navigation">
-            <nav id="site-navigation">
-                <ul>
+        <div class="navigation">
+            <nav>
+                <ul class="primary-links">
                     <li><a href="./">Pages</a></li>
                     <li><a href="./posts.html">Posts</a></li>
                     <li><a href="./users.html" aria-current="page">Users</a></li>
                 </ul>
-                <ul>
+                <ul class="secondary-links">
                     <li><a href="./about.html">About</a></li>
                 </ul>
             </nav>
@@ -59,7 +59,7 @@
     <main class="main container" id="main-content">
 
         <div class="container flow">
-            <h1>Users</h1>
+            <h1 id="heading-users" tabindex="0">Users (<span id="page-no"></span>)</h1>
             <div id="live-region" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
 
             <div id="users-page-container" class="users-content"></div>

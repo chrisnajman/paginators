@@ -1,3 +1,4 @@
+import pageNumber from "../../page-number.js"
 export default function renderPageButtons(
   paginatorEl, // <div id="paginator">
   currentPage,
@@ -71,6 +72,9 @@ export default function renderPageButtons(
       onPageChange(currentPage + 1)
     }
   }
+
+  // Output page number in h1 where specified, e.g. <h1 id="heading-posts" tabindex="0">Posts (<span id="page-no"></span>)</h1>
+  pageNumber()
 }
 
 // ---- helpers ----

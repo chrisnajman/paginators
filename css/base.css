@@ -10,6 +10,11 @@
     outline-offset: 0.1875rem;
 }
 
+/* Suppress outlines when focus was set programmatically */
+.focus-silent:focus {
+    outline: none !important;
+}
+
 body {
     font-size: clamp(1.156rem, 1.1182rem + 0.1757vw, 1.25rem);
     font-family: system-ui, sans-serif;
@@ -89,6 +94,8 @@ h3 {
 
 h1 {
     font-size: clamp(1.5rem, 1.3995rem + 0.4673vw, 1.75rem);
+    width: fit-content;
+    margin-inline: auto;
 }
 h2 {
     font-size: clamp(1.25rem, 1.1495rem + 0.4673vw, 1.5rem);
@@ -206,17 +213,26 @@ a[href^="https"] {
     flex-direction: column;
     gap: 4rem;
     padding: 1em;
+    min-width: 0;
     background-color: var(--el-bg);
 }
 
 /** Skip link */
 .skip-link {
-    background-color: var(--body-bg);
-    color: var(--body-fg);
-    font-weight: 600;
+    background-color: var(--el-bg);
+    color: var(--accent-colour);
     padding: 0.3125rem 0.625rem;
     margin-block-start: 0;
     margin-inline-end: 0.625rem;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        outline-offset: 0;
+    }
 }
 .element-invisible {
     clip: rect(0.0625rem, 0.0625rem, 0.0625rem, 0.0625rem);

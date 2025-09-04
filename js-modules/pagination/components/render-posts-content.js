@@ -4,10 +4,11 @@ export default function renderPostsContent(
   data,
   template,
   containerId,
+  pageAnchorId,
   page,
   itemsPerPage
 ) {
-  renderContent(data, template, containerId, {
+  renderContent(data, template, containerId, pageAnchorId, {
     page,
     itemsPerPage,
     contentKeys: [], // add HTML keys here if needed
