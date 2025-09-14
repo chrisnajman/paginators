@@ -7,7 +7,7 @@
         align-items: center;
         position: relative;
 
-        @media screen and (width <= 25rem) {
+        @media screen and (width <= 600px) {
             display: flex;
             justify-content: center;
             gap: 1.25rem;

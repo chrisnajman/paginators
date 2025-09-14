@@ -1,4 +1,5 @@
 @import "./css/root.css";
+@import "./css/no-js.css";
 @import "./css/base.css";
 @import "./css/theme-toggler.css";
 @import "./css/navigation.css";

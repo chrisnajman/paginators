@@ -6,6 +6,8 @@
     --border-radius: 1.25rem;
     --shadow-colour: rgba(0, 0, 0, 0.2);
     --shadow-right-bottom: 0.25rem 0.25rem 0.5rem var(--shadow-colour);
+    --warning: #900;
+    --warning-bg: #fee;
 
     /* light mode (default) */
     --accent-neutral: #e4e4e4;

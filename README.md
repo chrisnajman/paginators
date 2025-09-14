@@ -542,6 +542,10 @@ The site includes the following accessibility enhancements:
 - A visually hidden skip link is provided for screen reader users.
 - An ARIA live region (`<div id="live-region">`) announces new content loaded when navigating between pages.
 
+### No JS
+
+If JavaScript is disabled, a `<noscript>` message is displayed. Additionally, the loading animation and theme-toggler ceases to function.
+
 [Back to menu](#menu)
 
 ---

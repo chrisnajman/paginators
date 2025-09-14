@@ -1,0 +1,25 @@
+.no-js {
+    & .theme-toggler,
+    & .hamburger-button-wrapper,
+    & .loader,
+    & .loader::after {
+        display: none;
+    }
+}
+
+.noscript-banner {
+    position: fixed;
+    top: 30%;
+    left: 0;
+    right: 0;
+
+    background: var(--warning-bg);
+    color: var(--warning);
+    font-weight: var(--bold);
+    text-align: center;
+
+    padding: 0.75rem 1rem;
+    z-index: 9999;
+
+    border-block: 0.125rem solid var(--warning);
+}
