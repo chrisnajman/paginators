@@ -544,7 +544,7 @@ The site includes the following accessibility enhancements:
 
 ### No JS
 
-If JavaScript is disabled, a `<noscript>` message is displayed. Additionally, the loading animation and theme-toggler ceases to function.
+If JavaScript is disabled, a `<noscript>` message is displayed. Additionally, the loading animation and theme-toggler cease to function.
 
 [Back to menu](#menu)
 
